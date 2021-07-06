@@ -4,7 +4,7 @@ class Alphabet
     # Should Return Letter Index
     alphabet = 'A'.upto('Z').to_a
     letters = letters.upcase.split("")
-    letters.all? { |letter| alphabet.include?(letter) }
+    return unless letters.all? { |letter| alphabet.include?(letter) }
     total = 0
     letters.each_with_index do |l,i|
       value = (alphabet.index(l) + 1)
